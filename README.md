@@ -1,6 +1,6 @@
 # Playwright + Cucumber — SauceDemo Automation Suite
 
-Suite de pruebas automatizadas de extremo a extremo (E2E) para la aplicación web [SauceDemo](https://www.saucedemo.com/), desarrollada como solución al reto técnico de automatización de **Inetum**. 
+Suite de pruebas automatizadas de extremo a extremo (E2E) para la aplicación web [SauceDemo](https://www.saucedemo.com/), desarrollada como solución al reto técnico de automatización. 
 
 Este proyecto implementa pruebas de comportamiento (BDD) utilizando **Playwright** como motor de automatización y **Cucumber.js** como ejecutor de pruebas, todo estructurado bajo el patrón de diseño **Page Object Model (POM)** para garantizar legibilidad, escalabilidad y fácil mantenimiento.
 
