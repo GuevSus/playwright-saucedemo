@@ -82,6 +82,12 @@ Para la ejecución de los escenarios automatizados en el entorno de pruebas de S
 
 ```
 
+4. Instalar los navegadores que utiliza Playwright:
+```bash
+   npx playwright install chromium
+ 
+```
+
 ---
 
 ## Ejecución de las Pruebas
@@ -109,6 +115,10 @@ npx cucumber-js
     ```bash
     npm run test:checkout
     ```
+* **Solo escenarios etiquetados como Compra:**
+    ```bash
+        npm run test:compra
+    ```
 
 ### Ejecutar viendo el navegador (Modo Headed — Windows PowerShell)
 ```powershell
@@ -128,6 +138,18 @@ Puedes abrirlo directamente desde tu navegador web abriendo el archivo ubicado e
 reports/cucumber-report.html
 ```
 
+---
+
+### Captura de pantalla automática en fallos
+ 
+Cuando un escenario **falla**, el hook `After` (definido en `support/hooks.js`) toma automáticamente una captura de pantalla del estado del navegador en ese momento y la adjunta al reporte HTML. Esto permite diagnosticar visualmente qué ocurrió sin necesidad de volver a ejecutar la prueba.
+ 
+Para verla, abre `reports/cucumber-report.html`, busca el escenario en rojo y expande la sección **"hooks"** ubicada debajo del error — ahí aparece la imagen adjunta.
+ 
+### Timeout por defecto
+ 
+El tiempo máximo de espera configurado para cada paso (step) es de **30 segundos** (`setDefaultTimeout(30000)` en `support/hooks.js`). Si necesitas agregar pasos que tarden más en completarse, ajusta este valor en dicho archivo.
+ 
 ---
 
 ## Cobertura de Escenarios
